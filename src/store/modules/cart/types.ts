@@ -1,8 +1,3 @@
-// eslint-disable-next-line no-shadow
-export enum ActionTypes {
-  addProductToCartRequest = 'addProductToCartRequest',
-}
-
 export interface IProduct {
   id: number;
   title: string;

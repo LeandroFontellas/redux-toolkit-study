@@ -7,7 +7,7 @@ import {
   addProductToCartSuccessAction,
   addProductToCartFailureAction,
 } from './actions';
-import { ActionTypes, IStock } from './types';
+import { IStock } from './types';
 
 type CheckProductStockRequest = ReturnType<
   typeof addProductToCartRequestAction
@@ -36,5 +36,5 @@ function* checkProductStock({ payload }: CheckProductStockRequest) {
 }
 
 export default all([
-  takeLatest(ActionTypes.addProductToCartRequest, checkProductStock),
+  takeLatest(addProductToCartRequestAction, checkProductStock),
 ]);
